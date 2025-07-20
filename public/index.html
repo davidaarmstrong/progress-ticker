@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>County Ticker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>County Ticker</h1>
+
+  <div>
+    <label><input type="radio" name="mode" value="lowest" checked> Lowest</label>
+    <label><input type="radio" name="mode" value="highest"> Highest</label>
+    <label><input type="radio" name="mode" value="change"> Biggest Change</label>
+  </div>
+
+  <div id="ticker">
+    <div id="ticker-content"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
