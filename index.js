@@ -2463,15 +2463,17 @@ if (!fs.existsSync(persistentDbPath)) {
 }
 
 // Open database
-const db = new sqlite3.Database(persistentDbPath, sqlite3.OPEN_READONLY, (err) => {
+const db = new sqlite3.Database(persistentDbPath, sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error('Failed to connect to SQLite DB:', err.message);
   } else {
     console.log('Connected to SQLite DB at', persistentDbPath);
-    db.configure('busyTimeout', 5000);
-    db.run('PRAGMA journal_mode = WAL;');
   }
 });
+
+// Configure busy timeout and journal mode immediately after opening
+db.configure('busyTimeout', 5000);
+db.run('PRAGMA journal_mode = WAL;');
 
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, 'public')));

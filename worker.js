@@ -2460,10 +2460,11 @@ const db = new sqlite3.Database(persistentDbPath, sqlite3.OPEN_READWRITE, (err) 
     console.error('Failed to connect to SQLite DB:', err.message);
   } else {
     console.log('Connected to SQLite DB at', persistentDbPath);
-    db.configure('busyTimeout', 5000);
-    db.run('PRAGMA journal_mode = WAL;');  
   }
 });
+
+db.configure('busyTimeout', 5000);
+db.run('PRAGMA journal_mode = WAL;');  
 
 // Parameters
 const minValue = 0;
