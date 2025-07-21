@@ -3,13 +3,15 @@ const fs = require('fs');
 const path = require('path');
 
 // Paths
-const persistentDbPath = '/data/db.sqlite';
+const persistentDbPath = process.env.DB_PATH || '/data/db.sqlite';
 const initialDbPath = path.join(__dirname, 'db.sqlite');
 
-// Initialize persistent db if needed
+console.log('persistentDbPath:', persistentDbPath);
+console.log('initialDbPath:', initialDbPath);
+
 if (!fs.existsSync(persistentDbPath)) {
   fs.copyFileSync(initialDbPath, persistentDbPath);
-  console.log('Initialized persistent db.sqlite from repo');
+  console.log(`Initialized persistent db.sqlite at ${persistentDbPath} from repo copy`);
 }
 
 // Open database

@@ -7,8 +7,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Paths
-const persistentDbPath = '/data/db.sqlite';
+const persistentDbPath = process.env.DB_PATH || '/data/db.sqlite';
 const initialDbPath = path.join(__dirname, 'db.sqlite');
+
+console.log('persistentDbPath:', persistentDbPath);
+console.log('initialDbPath:', initialDbPath);
+
+if (!fs.existsSync(persistentDbPath)) {
+  fs.copyFileSync(initialDbPath, persistentDbPath);
+  console.log(`Initialized persistent db.sqlite at ${persistentDbPath} from repo copy`);
+}
 
 // Initialize persistent db if needed
 if (!fs.existsSync(persistentDbPath)) {
