@@ -24,6 +24,8 @@ function renderTicker(data) {
     if (window.innerWidth <= 600) {
       duration *= 1.5;  // 50% slower on small screens
     }
+    
+    console.log("Ticker animation duration:", duration);
 
     tickerContent.style.animation = `ticker-scroll ${duration}s linear infinite`;
   });
