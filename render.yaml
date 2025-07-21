@@ -12,17 +12,3 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-
-  - type: worker
-    name: county-ticker-updater
-    env: node
-    plan: starter
-    buildCommand: npm install
-    startCommand: npm run worker
-    disk:
-      name: ticker-disk
-      mountPath: /data
-      sizeGB: 1
-    envVars:
-      - key: NODE_ENV
-        value: production

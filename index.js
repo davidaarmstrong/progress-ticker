@@ -1,3 +1,6 @@
+if (process.env.RUN_WORKER === 'true') {
+  require('./worker.js');
+}
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
