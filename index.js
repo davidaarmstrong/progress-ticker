@@ -2458,11 +2458,6 @@ if (!fs.existsSync(persistentDbPath)) {
 
   initDb.close();
 }
-// Initialize persistent db if needed
-if (!fs.existsSync(persistentDbPath)) {
-  fs.copyFileSync(initialDbPath, persistentDbPath);
-  console.log('Initialized persistent db.sqlite from repo');
-}
 
 // Open database
 const db = new sqlite3.Database(persistentDbPath, sqlite3.OPEN_READONLY, (err) => {
