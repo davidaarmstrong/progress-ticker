@@ -1640,7 +1640,7 @@ if (!fs.existsSync(persistentDbPath)) {
     stmt.run('Noxubee, MS', 47.9524152735357, 47.9524152735357, 1);
     stmt.run('Nueces, TX', 42.5158474846504, 42.5158474846504, 2);
     stmt.run('Nye, NV', 57.1059253748042, 57.1059253748042, 1);
-    stmt.run('O'Brien, IA', 48.1367377238569, 48.1367377238569, 3);
+    stmt.run('O\'Brien, IA', 48.1367377238569, 48.1367377238569, 3);
     stmt.run('Oakland, MI', 44.9861807711841, 44.9861807711841, 1);
     stmt.run('Obion, TN', 42.5874808963527, 42.5874808963527, 1);
     stmt.run('Ocean, NJ', 20.3705019277853, 20.3705019277853, 2);
@@ -1818,7 +1818,7 @@ if (!fs.existsSync(persistentDbPath)) {
     stmt.run('Preston, WV', 66.2505114609662, 66.2505114609662, 2);
     stmt.run('Prince Edward, VA', 43.9060647117392, 43.9060647117392, 1);
     stmt.run('Prince George, VA', 46.5245101196479, 46.5245101196479, 1);
-    stmt.run('Prince George's, MD', 47.6947456909065, 47.6947456909065, 1);
+    stmt.run('Prince George\'s, MD', 47.6947456909065, 47.6947456909065, 1);
     stmt.run('Prince William, VA', 56.7064547707856, 56.7064547707856, 1);
     stmt.run('Providence, RI', 38.3997771522122, 38.3997771522122, 1);
     stmt.run('Prowers, CO', 47.9817417664502, 47.9817417664502, 3);
@@ -1839,7 +1839,7 @@ if (!fs.existsSync(persistentDbPath)) {
     stmt.run('Putnam, OH', 46.0363652232585, 46.0363652232585, 1);
     stmt.run('Putnam, TN', 49.7404030463142, 49.7404030463142, 2);
     stmt.run('Putnam, WV', 49.2686112591642, 49.2686112591642, 2);
-    stmt.run('Queen Anne's, MD', 39.8018930379763, 39.8018930379763, 2);
+    stmt.run('Queen Anne\'s, MD', 39.8018930379763, 39.8018930379763, 2);
     stmt.run('Queens, NY', 9.85479749038608, 9.85479749038608, 1);
     stmt.run('Quitman, GA', 40.5872144218237, 40.5872144218237, 2);
     stmt.run('Quitman, MS', 48.0260567653802, 48.0260567653802, 1);
@@ -2078,7 +2078,7 @@ if (!fs.existsSync(persistentDbPath)) {
     stmt.run('St. Lucie, FL', 42.9108974258155, 42.9108974258155, 2);
     stmt.run('St. Martin, LA', 39.6602365069522, 39.6602365069522, 2);
     stmt.run('St. Mary, LA', 33.019757853514, 33.019757853514, 1);
-    stmt.run('St. Mary's, MD', 45.2744679201758, 45.2744679201758, 1);
+    stmt.run('St. Mary\'s, MD', 45.2744679201758, 45.2744679201758, 1);
     stmt.run('St. Tammany, LA', 24.599134322142, 24.599134322142, 2);
     stmt.run('Stafford, KS', 47.5685885705311, 47.5685885705311, 3);
     stmt.run('Stafford, VA', 40.4455413862906, 40.4455413862906, 3);
