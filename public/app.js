@@ -49,7 +49,6 @@ async function updateTicker() {
   renderTicker(data);
 }
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("n").addEventListener("input", updateTicker);
   document.querySelectorAll('input[name="mode"]').forEach(radio => {
     radio.addEventListener("change", updateTicker);
   });
